@@ -18,7 +18,6 @@ def start():
 
         page_count = BeautifulSoup(requests.get(url + '1').text, "html.parser")
         page_count = page_count.find("div", {"class", "mPagination-mobilePages"}).text.split(' ')[1]
-        print(page_count)
         pages = page_scrapper(url, int(page_count))
         for page in pages:
             append_to_file(file, create_recipe_from_page(page))
