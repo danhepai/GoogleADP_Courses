@@ -1,3 +1,12 @@
+"""
+This is a basic program which scrappes recipes of traditional food from the web site: www.bucataria.lidl.ro
+It saves the data it scrappes in the text files available in this directory in the form of: 
+"NAME"
+"INGREDIENTS -> QUANTITY NEEDED"
+
+Have fun.
+"""
+
 from file_saver import append_to_file, create_recipe_from_page
 from scrappers import page_scrapper
 from bs4 import BeautifulSoup
